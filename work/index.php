@@ -2,7 +2,7 @@
 $n = mt_rand(1, 3);
 
 if ($n === 1) {
-  $message = 'UI/UXデザイナー見習いです';
+  $message = '<script>alert(1);</script>UI/UXデザイナー見習いです';
 } elseif ($n === 2) {
   $message = 'プログラミング勉強中です';
 } else {
@@ -28,7 +28,7 @@ if ($n === 1) {
       </div>
       <div class="info">
         <h1>山田太郎</h1>
-        <p><? $message; ?></p>
+        <p><?= htmlspecialchars($message, ENT_QUOTES, 'UTF-8'); ?></p>
         <ul>
           <li>
             <a href="https://dotinstall.com" target="_blank">
@@ -52,13 +52,13 @@ if ($n === 1) {
       <h1>勇者ゲーム</h1>
       <p>楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。</p>
     </section>
-  
+
     <section>
       <img src="img/work2.png" width="400" height="260" alt="宝探しゲームの紹介画像">
       <h1>宝探しゲーム</h1>
       <p>楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。</p>
     </section>
-  
+
     <section>
       <img src="img/work3.png" width="400" height="260" alt="神経衰弱の紹介画像">
       <h1>神経衰弱</h1>
@@ -72,4 +72,3 @@ if ($n === 1) {
   </footer>
 </body>
 </html>
-  
