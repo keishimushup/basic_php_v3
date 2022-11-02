@@ -1,7 +1,14 @@
 <?php
-$message = 'こんにちは！' . date('l');
+$n = mt_rand(1, 3);
 
-S
+if ($n === 1) {
+  $message = 'UI/UXデザイナー見習いです';
+} elseif ($n === 2) {
+  $message = 'プログラミング勉強中です';
+} else {
+  $message = 'PHPちょとわかります';
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +28,7 @@ S
       </div>
       <div class="info">
         <h1>山田太郎</h1>
-        <p><?php echo $message; ?></p>
+        <p><? $message; ?></p>
         <ul>
           <li>
             <a href="https://dotinstall.com" target="_blank">
